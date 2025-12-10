@@ -8,11 +8,8 @@ def is_prime(x: int, divisor: int = None) -> int:
 
     Returns:
         int: 1 if the number is prime, 0 otherwise
-
-    Raises:
-        ValueError: If x is not a natural number (x <= 0)
     '''
-    if divisor is None:
+    if divisor is None: # ! и другие тоже сделать
         divisor = 2
     if x < 2:
         return 0
@@ -23,6 +20,12 @@ def is_prime(x: int, divisor: int = None) -> int:
     return is_prime(x, divisor + 1)
 
 
-x = int(input())
-result = is_prime(x)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    x = int(input())
+    result = is_prime(x)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
