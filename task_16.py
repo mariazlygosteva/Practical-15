@@ -8,9 +8,6 @@ def ten_to_n(x: int, n: int) -> str:
 
     Returns:
         str: Number representation in base-n system as a string
-
-    Raises:
-        ValueError: If x is not natural or n is not between 2 and 16
     '''
     digits = '0123456789ABCDEF'
     if x < n:
@@ -18,7 +15,13 @@ def ten_to_n(x: int, n: int) -> str:
     return ten_to_n(x // n, n) + digits[x % n]
 
 
-x = int(input())
-n = int(input())
-result = ten_to_n(x, n)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    x = int(input())
+    n = int(input())
+    result = ten_to_n(x, n)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
