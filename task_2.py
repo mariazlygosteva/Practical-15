@@ -7,15 +7,18 @@ def count(n: int) -> int:
 
     Returns:
         Number of digits in the given number
-
-    Raises:
-        ValueError: If n is not a natural number (n <= 0)
     '''
     if n < 10:
         return 1
     return 1 + count(n // 10)
 
 
-n = int(input())
-result = count(n)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    n = int(input())
+    result = count(n)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
