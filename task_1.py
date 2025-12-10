@@ -8,16 +8,19 @@ def pownum(a: float, n: int) -> float:
 
     Returns:
         The result of a raised to the power of n
-
-    Raises:
-        ValueError: If n is negative
     '''
     if n == 0:
         return 1
     return a * pownum(a, n - 1)
 
 
-a = float(input())
-n = int(input())
-result = pownum(a, n)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    a = float(input())
+    n = int(input())
+    result = pownum(a, n)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
