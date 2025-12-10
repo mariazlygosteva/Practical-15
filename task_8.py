@@ -7,15 +7,18 @@ def fib(k: int) -> int:
 
     Returns:
         int: The k-th Fibonacci number
-
-    Raises:
-        ValueError: If k is negative
     '''
     if k <= 1:
         return k
     return fib(k - 1) + fib(k - 2)
 
 
-k = int(input())
-result = fib(k)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    k = int(input())
+    result = fib(k)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
