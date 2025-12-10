@@ -7,9 +7,6 @@ def numbers(x: int) -> None:
 
     Returns:
         None: This function does not return anything, it only prints
-
-    Raises:
-        ValueError: If x is not a natural number (x <= 0)
     '''
     if x < 10:
         print(x)
@@ -18,6 +15,12 @@ def numbers(x: int) -> None:
         numbers(x // 10)
 
 
-x = int(input())
-print()
-numbers(x)
+def main() -> None:
+    '''The main function of the program.'''
+    x = int(input())
+    print()
+    numbers(x)
+
+
+if __name__ == "__main__":
+    main()
