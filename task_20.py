@@ -10,9 +10,6 @@ def comp(a: str, b: str, m: int, n: int) -> int:
 
     Returns:
         int: Length of the longest common subsequence
-
-    Raises:
-        ValueError: If m or n do not match the actual string lengths
     '''
     if m == 0 or n == 0:
         return 0
@@ -22,9 +19,15 @@ def comp(a: str, b: str, m: int, n: int) -> int:
         return max(comp(a, b, m - 1, n), comp(a, b, m, n - 1))
 
 
-a = input()
-b = input()
-m = len(a)
-n = len(b)
-result = comp(a, b, m, n)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    a = input()
+    b = input()
+    m = len(a)
+    n = len(b)
+    result = comp(a, b, m, n)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
