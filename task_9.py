@@ -8,16 +8,19 @@ def combin(n: int, k: int) -> int:
 
     Returns:
         int: Number of ways to choose k items from n items
-
-    Raises:
-        ValueError: If k is negative or greater than n
     '''
     if k == 0 or k == n:
         return 1
     return combin(n - 1, k - 1) + combin(n - 1, k)
 
 
-n = int(input())
-k = int(input())
-result = combin(n, k)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    n = int(input())
+    k = int(input())
+    result = combin(n, k)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
