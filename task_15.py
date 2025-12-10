@@ -7,9 +7,6 @@ def ten_to_bin(x: int) -> str:
 
     Returns:
         str: Binary representation of the number as a string
-
-    Raises:
-        ValueError: If x is not a natural number (x <= 0)
     '''
     if x == 0:
         return '0'
@@ -18,7 +15,13 @@ def ten_to_bin(x: int) -> str:
     return ten_to_bin(x // 2) + str(x % 2)
 
 
-x = int(input())
-result = ten_to_bin(x)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    x = int(input())
+    result = ten_to_bin(x)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
 
