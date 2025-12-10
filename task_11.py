@@ -7,9 +7,6 @@ def ind_maxlist(a: list) -> int:
 
     Returns:
         int: Index of the maximum element in the list
-
-    Raises:
-        ValueError: If the list is empty
     '''
     if len(a) == 1:
         return 0
@@ -17,6 +14,12 @@ def ind_maxlist(a: list) -> int:
     return 0 if a[0] >= a[max_index] else max_index
 
 
-a = list(map(int, input().split()))
-result = ind_maxlist(a)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    a = list(map(int, input().split()))
+    result = ind_maxlist(a)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
