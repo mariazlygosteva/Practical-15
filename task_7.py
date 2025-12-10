@@ -8,16 +8,19 @@ def node(a: int, b: int) -> int:
 
     Returns:
         int: Greatest common divisor of a and b
-
-    Raises:
-        ValueError: If either a or b is not a natural number
     '''
     if b == 0:
         return a
     return node(b, a % b)
 
 
-a = int(input())
-b = int(input())
-result = node(a, b)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    a = int(input())
+    b = int(input())
+    result = node(a, b)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
