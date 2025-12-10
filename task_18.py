@@ -9,9 +9,6 @@ def simmetr(s: str, i: int, j: int) -> bool:
 
     Returns:
         bool: True if the substring is symmetric, False otherwise
-
-    Raises:
-        ValueError: If indices are out of string bounds or invalid
     '''
     if i >= j:
         return True
@@ -20,8 +17,14 @@ def simmetr(s: str, i: int, j: int) -> bool:
     return simmetr(s, i + 1, j - 1)
 
 
-s = input()
-i = int(input())
-j = int(input())
-result = simmetr(s, i, j)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    s = input()
+    i = int(input())
+    j = int(input())
+    result = simmetr(s, i, j)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
