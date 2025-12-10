@@ -8,16 +8,19 @@ def mod_number(a: int, b: int) -> int:
 
     Returns:
         int: Remainder of a divided by b
-
-    Raises:
-        ValueError: If either a or b is not a natural number
     '''
     if a < b:
         return a
     return mod_number(a - b, b)
 
 
-a = int(input())
-b = int(input())
-result = mod_number(a, b)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    a = int(input())
+    b = int(input())
+    result = mod_number(a, b)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
