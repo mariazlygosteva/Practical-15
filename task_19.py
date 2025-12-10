@@ -8,9 +8,6 @@ def count(a: int, b: int) -> int:
 
     Returns:
         int: Number of squares that can be cut from the rectangle
-
-    Raises:
-        ValueError: If either a or b is not a natural number
     '''
     if a == 0 or b == 0:
         return 0
@@ -19,7 +16,13 @@ def count(a: int, b: int) -> int:
     return 1 + count(a - b, b)
 
 
-a = int(input())
-b = int(input())
-result = count(a, b)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    a = int(input())
+    b = int(input())
+    result = count(a, b)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
