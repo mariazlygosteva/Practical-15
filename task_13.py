@@ -8,9 +8,6 @@ def odd_list(a: list, n: int) -> list:
 
     Returns:
         list: List containing only the even numbers from the input list
-
-    Raises:
-        ValueError: If n does not match the actual length of the list
     '''
     if n == 0:
         return []
@@ -20,7 +17,13 @@ def odd_list(a: list, n: int) -> list:
     return result
 
 
-a = list(map(int, input().split()))
-n = len(a)
-result = odd_list(a, n)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    a = list(map(int, input().split()))
+    n = len(a)
+    result = odd_list(a, n)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
