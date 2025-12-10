@@ -7,15 +7,18 @@ def maxlist(a: list) -> int:
 
     Returns:
         int: The maximum element in the list
-
-    Raises:
-        ValueError: If the list is empty
     '''
     if len(a) == 1:
         return a[0]
     return max(a[0], maxlist(a[1:]))
 
 
-a = list(map(int, input().split()))
-result = maxlist(a)
-print(result)
+def main() -> None:
+    '''The main function of the program.'''
+    a = list(map(int, input().split()))
+    result = maxlist(a)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
